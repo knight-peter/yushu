@@ -13,10 +13,11 @@ __author__ = '徐子玉'
 app = Flask(__name__)
 
 
-@app.route('/hello/')
+# @app.route('/hello/')
 def hello():
     # 基于类的视图
-    return 'Hello,XuQi'
+    return 'Hello,徐琪'
 
+app.add_url_rule('/hello',view_func=hello)
 
-app.run()
+app.run(debug=True)
